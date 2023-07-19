@@ -1,0 +1,24 @@
+
+<div class="create-account">
+    <h2 class="text-center font-bold text-3xl">Create Account</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <form [formGroup]="createAccountForm" class="flex-row justify-center ">
+          <div class="form-group">
+            <label for="" class="text-center font-bold text-3xl">Country:</label>
+            <select formControlName="country" class="form-control">
+              <option value="">Select country...</option>
+              
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="text-center font-bold text-3xl">City:</label>
+            <select formControlName="state" class="form-control">
+              <option value="">Select state...</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
