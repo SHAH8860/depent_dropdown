@@ -1,24 +1,33 @@
+<div class="container ">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg m-auto">
+      <img class="w-full mt-7" src="https://source.unsplash.com/random/200x200" alt="Sunset in the mountains">
+      <form [formGroup]="createAccountForm" class="flex-row justify-center mt-11 p-5">
+        <div class="form-group">
+          <label for="" class="text-center text-gray-700 text-base">Country:</label>
+          <select formControlName="country" class="form-control border-8" (change)="onChangeCountry($event)">
+            <option value="">Select country...</option>
+            <option *ngFor="let data of countries" [value]="data.id">{{data.country}}</option>
 
-<div class="create-account">
-    <h2 class="text-center font-bold text-3xl">Create Account</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <form [formGroup]="createAccountForm" class="flex-row justify-center ">
-          <div class="form-group">
-            <label for="" class="text-center font-bold text-3xl">Country:</label>
-            <select formControlName="country" class="form-control">
-              <option value="">Select country...</option>
-              
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="" class="text-center font-bold text-3xl">City:</label>
-            <select formControlName="state" class="form-control">
-              <option value="">Select state...</option>
-            </select>
-          </div>
-        </form>
+          </select>
+        </div>
+        <div class="form-group mt-4">
+          <label for="" class="text-center font-bold  text-gray-700 text-base">City:</label>
+          <select formControlName="state" class="form-control border-8" (change)="onchange($event)">
+            <option value="">Select state...</option>
+            <option *ngFor="let a of states" [value]="a.id">{{a}}</option>
+          </select>
+        </div>
+      </form>
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
       </div>
     </div>
   </div>
-  

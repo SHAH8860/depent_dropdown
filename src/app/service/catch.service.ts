@@ -14,4 +14,7 @@ export class CatchService {
     return this.http.get(this.url)
 
   }
+  getstate(countryid:number){
+    return this.http.get(`${this.url}/${countryid}`)
+  }
 }
